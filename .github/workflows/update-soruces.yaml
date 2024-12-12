@@ -1,6 +1,7 @@
----
 name: "Update sources"
+
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 
@@ -11,8 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Nix
+        uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
       - name: Run update script
-        uses: ./update.sh
+        run: ./update.sh
 
       - name: Commit and push changes
         run: |
