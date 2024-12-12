@@ -1,0 +1,23 @@
+---
+name: "Update sources"
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run update script
+        uses: ./update.sh
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add sources.json
+          git commit -m "update sources"
+          git push
