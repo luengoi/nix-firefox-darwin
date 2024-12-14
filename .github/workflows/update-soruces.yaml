@@ -24,6 +24,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
+          [[ "$(git diff sources.json)" ]] || exit 0
           git add sources.json
           git commit -m "update sources"
           git push
