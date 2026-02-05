@@ -1,7 +1,7 @@
 {
   "firefox": {
-    "version": "147.0.2",
-    "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/147.0.2/mac/en-US/Firefox%20147.0.2.dmg",
-    "sha256": "767ee20f7742da7c6ea5edc6daa5ca66be56f299d457a188172fe9ba9b658c68"
+    "version": "147.0.3",
+    "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/147.0.3/mac/en-US/Firefox%20147.0.3.dmg",
+    "sha256": "400ce7988c3789ef7b57b4b1411f2aa726e045b63597ca708e005a9c81e87528"
   }
 }
